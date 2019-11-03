@@ -1,0 +1,73 @@
+<div class="card mt-5">
+  <div class="card-body">
+    <form #Form="ngForm" (ngSubmit)="Coeficiente2019()">
+
+      <!-- <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="productService.selectedProduct.$key"> -->
+      <div class="form-group">
+
+        <div class="row">
+          <div class="col-4">Genero: </div>
+          <div class="col-8">
+            <select name="genero" id="genero" [(ngModel)]="parametros.genero" class="ancho200">
+              <option [ngValue]="g.valor" *ngFor="let g of generos">
+                {{g.text}}
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row mt-1">
+          <div class="col-4">Peso: </div>
+          <div class="col-8">
+            <input type="number" class="form-control ancho200 text-right" name="peso" #name="ngModel" [(ngModel)]="parametros.pesoCorporal">
+          </div>
+        </div>
+
+        <div class="row mt-1">
+          <div class="col-4">Modalidad: </div>
+          <div class="col-8 ancho200">
+            <select name="modalidad" id="modalidad" [(ngModel)]="parametros.modalidad" class="ancho200">
+              <option [ngValue]="m.valor" *ngFor="let m of modalidades">
+                {{m.text}}
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row mt-1">
+          <div class="col-4">Tipo: </div>
+          <div class="col-8">
+            <select name="tipo" id="tipo" [(ngModel)]="parametros.tipo" class="ancho200">
+              <option [ngValue]="t.valor" *ngFor="let t of tipos">
+                {{t.text}}
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row mt-1">
+          <div class="col-4">Total:</div>
+          <div class="col-8">
+            <input type="number" class="form-control ancho200 text-right" name="total" #name="ngModel" [(ngModel)]="parametros.pesoTotal">
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <button class="btn btn-success" type="submit">
+          <i class="fas fa-dumbbell"></i> Calcular
+          <!-- fas fa-calculator fas fa-dumbbell -->
+        </button>&nbsp;
+        <button type="button" class="btn btn-secondary" (click)="limpiar()">
+          <i class="fas fa-sync-alt"></i> Limpiar
+        </button>
+      </div>
+
+    </form>
+    <h3>Puntos IPF: {{puntosIPF}}</h3>
+  </div>
+</div>
+
+<!-- <iframe 
+src="https://scratch.mit.edu/projects/267982975/embed" allowtransparency="true" 
+width="360" height="300" frameborder="0" scrolling="no" allowfullscreen></iframe> -->
