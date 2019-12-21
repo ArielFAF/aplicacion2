@@ -1,0 +1,21 @@
+<div class="card">
+  <div class="card-body">
+    <h6 class="text-center">Transferencias</h6>
+    <table class="table table-sm table-hover">
+        <thead>
+            <tr>
+              <th>Nro</th>
+              <th>Fecha</th>
+              <th>Importe</th>
+            </tr>
+          </thead>
+      <tbody>
+        <tr *ngFor="let cuota of cuotas">
+          <td>{{cuota.Numero}}</td>
+          <td>{{cuota.Fecha}}</td>
+          <td>{{cuota.Importe}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
