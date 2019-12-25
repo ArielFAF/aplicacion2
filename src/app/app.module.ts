@@ -28,11 +28,13 @@ import { PrestamoComponent } from './components/prestamo/prestamo.component';
 //services
 import { ProductService } from './services/product.service';
 import { SpreadsheetDS } from './services/spreadsheet-data.service';
+import { VueltaComponent } from './components/vuelta/vuelta.component';
 
 const appRoutes: Routes = [
   {path: '', redirectTo: '/calculadora', pathMatch: 'full'},
   { path: 'calculadora', component: CalculadoraComponent },
-  { path: 'prestamo', component: PrestamoComponent }
+  { path: 'prestamo', component: PrestamoComponent },
+  { path: 'vuelta', component: VueltaComponent }
 ];
 
 @NgModule({
@@ -42,7 +44,8 @@ const appRoutes: Routes = [
     ProductListComponent,
     ProductComponent,
     CalculadoraComponent,
-    PrestamoComponent
+    PrestamoComponent,
+    VueltaComponent
   ],
   imports: [
     BrowserModule,
