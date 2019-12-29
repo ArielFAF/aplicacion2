@@ -24,14 +24,18 @@ import { ProductListComponent } from './components/products/product-list/product
 import { ProductComponent } from './components/products/product/product.component'; 
 import { CalculadoraComponent } from './components/ipf/calculadora/calculadora.component';
 import { PrestamoComponent } from './components/prestamo/prestamo.component';
+import { VueltaComponent } from './components/vuelta/vuelta.component';
+import { LoginComponent } from './components/login/login.component';
 
 //services
 import { ProductService } from './services/product.service';
 import { SpreadsheetDS } from './services/spreadsheet-data.service';
-import { VueltaComponent } from './components/vuelta/vuelta.component';
+import { LoginService } from './services/login.service';
 
 const appRoutes: Routes = [
-  {path: '', redirectTo: '/calculadora', pathMatch: 'full'},
+  {path: '', redirectTo: '/login', pathMatch: 'full'},
+  { path: 'login', component: LoginComponent },
+  { path: 'products', component: ProductsComponent },
   { path: 'calculadora', component: CalculadoraComponent },
   { path: 'prestamo', component: PrestamoComponent },
   { path: 'vuelta', component: VueltaComponent }
@@ -45,7 +49,8 @@ const appRoutes: Routes = [
     ProductComponent,
     CalculadoraComponent,
     PrestamoComponent,
-    VueltaComponent
+    VueltaComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -63,7 +68,8 @@ const appRoutes: Routes = [
   ],
   providers: [
     ProductService,
-    SpreadsheetDS
+    SpreadsheetDS,
+    LoginService
   ],
   bootstrap: [AppComponent]
 })
