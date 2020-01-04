@@ -31,6 +31,7 @@ import { LoginComponent } from './components/login/login.component';
 import { ProductService } from './services/product.service';
 import { SpreadsheetDS } from './services/spreadsheet-data.service';
 import { LoginService } from './services/login.service';
+import { TiempoComponent } from './components/tiempo/tiempo.component';
 
 const appRoutes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
@@ -38,7 +39,8 @@ const appRoutes: Routes = [
   { path: 'products', component: ProductsComponent },
   { path: 'calculadora', component: CalculadoraComponent },
   { path: 'prestamo', component: PrestamoComponent },
-  { path: 'vuelta', component: VueltaComponent }
+  { path: 'vuelta', component: VueltaComponent },
+  { path: 'tiempo', component: TiempoComponent }
 ];
 
 @NgModule({
@@ -50,7 +52,8 @@ const appRoutes: Routes = [
     CalculadoraComponent,
     PrestamoComponent,
     VueltaComponent,
-    LoginComponent
+    LoginComponent,
+    TiempoComponent
   ],
   imports: [
     BrowserModule,

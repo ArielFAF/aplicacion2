@@ -2,11 +2,13 @@
 <app-calculadora></app-calculadora> -->
 
 <nav class="navbar navbar-dark bg-dark">
-  <a *ngIf="loginService.personaLogueada === 'Gerardo'" routerLink="/calculadora" routerLinkActive="active">Calculadora</a>|
+  <a *ngIf="loginService.personaLogueada === 'Gerardo'" routerLink="/calculadora" routerLinkActive="active">Calculadora</a>
 
-  <a *ngIf="loginService.personaLogueada === 'Elena'" routerLink="/products" routerLinkActive="active">Lista de Compras</a>|
+  <a *ngIf="loginService.personaLogueada === 'Elena'" routerLink="/products" routerLinkActive="active">Lista de Compras</a>
 
-  <a *ngIf="loginService.personaLogueada === 'Gerardo'" routerLink="/prestamo" routerLinkActive="active">Prestamo</a>|
+  <!-- <a routerLink="/tiempo" routerLinkActive="active">Tiempo</a> -->
+
+  <a *ngIf="loginService.personaLogueada === 'Gerardo'" routerLink="/prestamo" routerLinkActive="active">Prestamo</a>
 
   <a *ngIf="loginService.personaLogueada === 'Gerardo'" routerLink="/vuelta" routerLinkActive="active">Vuelta</a>
 

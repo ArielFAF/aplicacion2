@@ -1,0 +1,10 @@
+{
+    "/dpd/*": {
+      "target": "http://www3.smn.gov.ar",
+      "secure": false,
+      "pathRewrite": {
+        "^/dpd": "api"
+      },
+      "changeOrigin": true
+    }
+  }
