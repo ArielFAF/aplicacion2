@@ -14,6 +14,8 @@ import { environment } from '../environments/environment';
 
 import { RouterModule, Routes } from '@angular/router';
 
+import { PdfJsViewerModule } from 'ng2-pdfjs-viewer';
+
 //firebase 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule} from 'angularfire2/database';
@@ -32,6 +34,7 @@ import { ProductService } from './services/product.service';
 import { SpreadsheetDS } from './services/spreadsheet-data.service';
 import { LoginService } from './services/login.service';
 import { TiempoComponent } from './components/tiempo/tiempo.component';
+import { ResumenComponent } from './components/resumen/resumen.component';
 
 const appRoutes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
@@ -40,7 +43,8 @@ const appRoutes: Routes = [
   { path: 'calculadora', component: CalculadoraComponent },
   { path: 'prestamo', component: PrestamoComponent },
   { path: 'vuelta', component: VueltaComponent },
-  { path: 'tiempo', component: TiempoComponent }
+  { path: 'tiempo', component: TiempoComponent },
+  { path: 'resumen', component: ResumenComponent }
 ];
 
 @NgModule({
@@ -53,7 +57,8 @@ const appRoutes: Routes = [
     PrestamoComponent,
     VueltaComponent,
     LoginComponent,
-    TiempoComponent
+    TiempoComponent,
+    ResumenComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +72,8 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: false } // <-- debugging purposes only
-    )
+    ),
+    PdfJsViewerModule // <-- Add to declarations
   ],
   providers: [
     ProductService,

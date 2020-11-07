@@ -4,6 +4,8 @@
 <nav class="navbar navbar-dark bg-dark">
   <a *ngIf="loginService.personaLogueada === 'Gerardo'" routerLink="/calculadora" routerLinkActive="active">Calculadora</a>
 
+  <a *ngIf="loginService.personaLogueada === 'Elena'" routerLink="/resumen" routerLinkActive="active">Resumenes</a>
+
   <a *ngIf="loginService.personaLogueada === 'Elena'" routerLink="/products" routerLinkActive="active">Lista de Compras</a>
 
   <!-- <a routerLink="/tiempo" routerLinkActive="active">Tiempo</a> -->

@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
   ir(persona) {
     switch(persona){
       case 'Elena':
-        this.router.navigateByUrl('/products');
+        this.router.navigateByUrl('/resumen');
         break;
       case 'Gerardo':
         this.router.navigateByUrl('/calculadora');
